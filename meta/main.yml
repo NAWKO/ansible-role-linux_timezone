@@ -2,7 +2,6 @@
 # meta file for ansible-role-linux_timezone
 
 galaxy_info:
-  role_name: ansible-role-linux_timezone
   author: Pierre Nagl
   description: Ansible Role to set the timezone on Linux servers.
   company: NAWKO
