@@ -1,0 +1,27 @@
+<%#
+name: ansible_role_linux_timezone
+description: Set timezone on linux based systems
+snippet: false
+template_inputs:
+- name: general_timezone
+  required: false
+  input_type: user
+  description: Set the timezone
+  options: "America/Chicago\r\nAmerica/Los_Angeles\r\nAmerica/New_York\r\nAmerica/Sao_Paulo\r\nAmerica/Toronto\r\nAsia/Seoul\r\nAsia/Singapore\r\nAsia/Seoul\r\nAsia/Dubai\r\nAsia/Hong_Kong\r\nAsia/Istanbul\r\nEurope/Amsterdam\r\nEurope/Berlin\r\nEurope/London\r\nEurope/Madrid\r\nEurope/Moscow\r\nEurope/Paris\r\nEurope/Rome\r\nEurope/Warsaw\r\nEurope/Zurich"
+  advanced: false
+  value_type: plain
+  resource_type: Image
+  default: Europe/Berlin
+  hidden_value: false
+model: JobTemplate
+job_category: Ansible Playbook
+provider_type: Ansible
+kind: job_template
+%>
+
+---
+- hosts: all
+  become: true
+  roles:
+    - role: ansible-role-linux_timezone
+      n_selected_timezone: "{{ general_timezone }}"

@@ -1,0 +1,44 @@
+---
+# meta file for ansible-role-linux_timezone
+
+galaxy_info:
+  role_name: ansible-role-linux_timezone
+  author: Pierre Nagl
+  description: Ansible Role to set the timezone on Linux servers.
+  company: NAWKO
+  license: MIT
+  min_ansible_version: 2.14
+  platforms:
+    - name: EL
+      versions:
+        - "9"
+        - "8"
+        - "7"
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - bookworm
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+        - lunar
+        - noble
+    - name: opensuse
+      versions:
+        - "15.4"
+        - "15.5"
+    - name: ArchLinux
+      versions:
+        - all
+  galaxy_tags:
+    - timezone
+    - time
+    - localization
+    - system
+    - rhel
+    - linux
+    - configuration
+
+dependencies: []

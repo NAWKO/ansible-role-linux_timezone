@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-role-linux_timezone
+
+- name: Set timezone
+  command: timedatectl set-timezone {{ n_selected_timezone }}
+  changed_when: false
